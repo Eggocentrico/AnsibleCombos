@@ -1,0 +1,8 @@
+---
+- hosts: win
+
+  tasks:
+          - name: Copy file
+            win_copy:
+                src: 'Asistencia TCServices.exe'
+                dest: 'C:\Users\COMBOS\Desktop\Asistencia TCServices.exe'

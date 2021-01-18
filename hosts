@@ -1,0 +1,13 @@
+[win]
+combos3 ansible_host=192.168.1.74
+combos4 ansible_host=192.168.1.67
+combos5 ansible_host=192.168.1.70
+combos8 ansible_host=192.168.1.90
+combosportatil1 ansible_host=192.168.1.76
+
+[win:vars]
+ansible_user=COMBOS
+ansible_password=desktop.1nd
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+ansible_winrm_kerberos_delegation=true

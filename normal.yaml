@@ -1,0 +1,26 @@
+---
+
+- hosts: win
+
+  tasks:
+
+  - name: Install office and winrar
+    win_chocolatey:
+      name:
+      - office365business
+      - winrar
+      ignore_checksums: true
+  
+  - name: Create network folder
+    win_file:
+      path: C:\Archivos compartidos
+      state: directory
+  
+  - name: Share folder through network
+    win_share:
+      name: Archivos compartidos
+      description: Archivos copartidos en la red
+      path: C:\Archivos compartidos
+      list: true
+      full: Administradores,COMBOS
+      read: Todos
